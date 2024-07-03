@@ -24,8 +24,6 @@ public class PlayerScript : MonoBehaviour
 
         float stageMax = 4.0f;
 
-        float stageMin = -4.0f;
-
         if (Input.GetKey(KeyCode.RightArrow))
         {
             if (transform.position.x < stageMax)
@@ -40,7 +38,7 @@ public class PlayerScript : MonoBehaviour
 
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            if (transform.position.x > stageMin)
+            if (transform.position.x > -stageMax)
             {
                 rb.velocity = new Vector3(-moveSpeed, 0, 0);
 
